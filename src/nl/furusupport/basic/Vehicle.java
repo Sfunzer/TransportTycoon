@@ -16,7 +16,14 @@ public abstract class Vehicle {
 
     public void drive(double kiloMeters){
         mileage = mileage + kiloMeters;
+        calculateDepreciation();
     }
 
-    public abstract double calculateDepreciation(double distance);
+    protected abstract double calculateDepreciation();
+        //removed distance as a method variable as it is not needed to calculate the depreciation.
+
+
+    public double getDeprecation() {
+        return deprecation;
+    }
 }
